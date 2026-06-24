@@ -44,3 +44,22 @@ end, { desc = "Toggle NvimTree" })
 vim.keymap.set("n", "<leader>o", function()
     require("nvim-tree.api").tree.focus()
 end, {desc = "Focus NvimTree"})
+
+
+-- fzf 
+vim.keymap.set("n", "<leader>ff", function()
+    require("fzf-lua").files()
+end, { desc = "Find files" })
+
+vim.keymap.set("n", "<leader>fg", function()
+    require("fzf-lua").live_grep()
+end, { desc = "Live grep" })
+
+vim.keymap.set("n", "<leader>fw", function()
+    require("fzf-lua").grep_cword()
+end, { desc = "Grep word under cursor" })
+
+vim.keymap.set("n", "<leader>fb", function()
+    require("fzf-lua").buffers()
+end, { desc = "Buffers" })
+
