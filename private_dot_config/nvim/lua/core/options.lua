@@ -48,7 +48,7 @@ end
 
 vim.opt.backup = false -- do not create a backup file
 vim.opt.writebackup = false -- do not write to a backup file
-vim.opt.swapfile = true
+vim.opt.swapfile = false 
 vim.opt.undofile = true -- do create an undo file
 vim.opt.undodir = undodir -- set the undo directory
 vim.opt.updatetime = 300 -- faster completion
