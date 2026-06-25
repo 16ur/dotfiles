@@ -37,13 +37,13 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Nvim tree
 vim.keymap.set("n", "<leader>e", function()
-	require("nvim-tree.api").tree.toggle()
+    require("nvim-tree.api").tree.toggle()
 end, { desc = "Toggle NvimTree" })
 
 
 vim.keymap.set("n", "<leader>wh", function()
     require("nvim-tree.api").tree.focus()
-end, {desc = "Focus NvimTree"})
+end, { desc = "Focus NvimTree" })
 
 
 -- fzf
@@ -73,10 +73,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "<leader>lf", function()
             vim.lsp.buf.format({ async = true })
         end, opts)
     end,
 })
+
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
