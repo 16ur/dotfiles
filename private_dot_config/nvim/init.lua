@@ -10,6 +10,7 @@ require("plugins.lsp")
 require("plugins.completion")
 require("plugins.fzf")
 require("plugins.mini")
+require("plugins.treesitter")
 
 
 
