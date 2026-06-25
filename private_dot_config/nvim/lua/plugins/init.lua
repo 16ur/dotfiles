@@ -3,6 +3,7 @@ vim.pack.add({
 	"https://www.github.com/ibhagwan/fzf-lua",
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
 	"https://www.github.com/nvim-mini/mini.nvim",
+    "https://github.com/lewis6991/gitsigns.nvim",
     {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
