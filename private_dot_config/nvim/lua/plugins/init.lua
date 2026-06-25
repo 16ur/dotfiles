@@ -12,4 +12,8 @@ vim.pack.add({
 		branch = "main",
 		build = ":TSUpdate",
 	},
+    {
+        src = "https://github.com/Saghen/blink.cmp",
+        version = vim.version.range("1.*"),
+    },
 })

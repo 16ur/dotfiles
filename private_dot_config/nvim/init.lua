@@ -13,6 +13,6 @@ require("plugins.mini")
 require("plugins.treesitter")
 require("plugins.gitsigns")
 require("plugins.lsp")
-
+require("plugins.completion")
 
 
