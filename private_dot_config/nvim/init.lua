@@ -12,6 +12,7 @@ require("plugins.fzf")
 require("plugins.mini")
 require("plugins.treesitter")
 require("plugins.gitsigns")
+require("plugins.lsp")
 
 
 
