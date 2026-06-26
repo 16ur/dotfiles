@@ -82,3 +82,32 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.keymap.set("n", "gl", vim.diagnostic.open_float)
 
+
+
+-- Open vertical terminal
+vim.keymap.set("n", "<leader>st", function()
+    vim.cmd("vsplit")
+    vim.cmd("terminal")
+    vim.cmd("startinsert")
+end, { desc = "Vertical terminal" })
+
+
+-- Open horizontal terminal
+vim.keymap.set("n", "<leader>sT", function()
+    vim.cmd("split")
+    vim.cmd("terminal")
+    vim.cmd("startinsert")
+end, { desc = "Horizontal terminal" })
+
+
+vim.api.nvim_create_autocmd("TermOpen", {
+    callback = function(args)
+        local opts = { buffer = args.buf }
+
+        -- Escape terminal mode
+        vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], opts)
+
+        -- Close terminal window
+        vim.keymap.set("n", "q", "<cmd>close<CR>", opts)
+    end,
+})
