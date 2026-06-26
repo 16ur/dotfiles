@@ -8,6 +8,7 @@ vim.pack.add({
     "https://github.com/mason-org/mason-lspconfig.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/folke/which-key.nvim",
+    "https://github.com/akinsho/bufferline.nvim",
     {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",

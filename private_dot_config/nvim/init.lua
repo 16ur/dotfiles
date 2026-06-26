@@ -14,5 +14,5 @@ require("plugins.treesitter")
 require("plugins.gitsigns")
 require("plugins.lsp")
 require("plugins.completion")
-
+require("plugins.bufferline")
 
