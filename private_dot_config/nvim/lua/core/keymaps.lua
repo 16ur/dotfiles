@@ -46,9 +46,9 @@ vim.keymap.set("n", "<leader>e", function()
 end, { desc = "Toggle NvimTree" })
 
 
-vim.keymap.set("n", "<leader>wh", function()
-    require("nvim-tree.api").tree.focus()
-end, { desc = "Focus NvimTree" })
+-- vim.keymap.set("n", "<leader>wo", function()
+--     require("nvim-tree.api").tree.focus()
+-- end, { desc = "Focus NvimTree" })
 
 
 -- fzf
