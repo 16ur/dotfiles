@@ -15,7 +15,12 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit window" })
 -- Buffers
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+-- vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+
+vim.keymap.set("n", "<leader>bd", function()
+    require("mini.bufremove").delete(0, false)
+end, { desc = "Delete buffer" })
+
 
 -- Splits
 vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split vertically" })
