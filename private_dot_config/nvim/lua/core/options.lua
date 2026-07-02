@@ -1,5 +1,7 @@
+vim.pack.add {{ src = "https://github.com/buisson-theme/buisson.nvim", name = "buisson" }}
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
-vim.cmd.colorscheme("habamax")
+vim.cmd.colorscheme("buisson")
 
 -- OPTIONS --
 vim.opt.number = true
@@ -83,4 +85,3 @@ vim.opt.wildmode = "longest:full,full" -- complete longest common match, full co
 vim.opt.diffopt:append("linematch:60") -- improve diff display
 vim.opt.redrawtime = 10000 -- increase neovim redraw tolerance
 vim.opt.maxmempattern = 20000 -- increase max memory
-
