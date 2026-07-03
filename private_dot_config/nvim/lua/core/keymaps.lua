@@ -53,7 +53,10 @@ end, { desc = "Toggle NvimTree" })
 
 -- fzf
 vim.keymap.set("n", "<leader>ff", function()
-    require("fzf-lua").files()
+  if vim.bo.filetype == "NvimTree" then
+      vim.cmd("wincmd p")
+  end
+  require("fzf-lua").files()
 end, { desc = "Find files" })
 
 vim.keymap.set("n", "<leader>fg", function()
