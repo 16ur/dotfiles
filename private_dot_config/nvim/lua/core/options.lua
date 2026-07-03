@@ -1,7 +1,14 @@
-vim.pack.add {{ src = "https://github.com/buisson-theme/buisson.nvim", name = "buisson" }}
+vim.pack.add {{ src = "https://github.com/buisson-theme/nvim", name = "buisson" }}
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.cmd.colorscheme("buisson")
+
+-- User command 
+-- Update plugins
+vim.api.nvim_create_user_command("PackUpdate", function()
+    vim.pack.update()
+end, {})
+
 
 -- OPTIONS --
 vim.opt.number = true
