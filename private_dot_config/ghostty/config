@@ -1,0 +1,11 @@
+
+term = xterm-256color
+#font-family = Maple Mono
+font-family=CommitMono
+#theme = "Kanagawa Wave"
+theme = buisson-dark
+#background = #1c1c1c
+font-size = 14
+macos-titlebar-proxy-icon = hidden
+title = " "
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
