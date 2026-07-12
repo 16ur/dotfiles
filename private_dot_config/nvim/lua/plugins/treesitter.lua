@@ -8,6 +8,7 @@ ts.install({
     "lua",
     "vim",
     "rust",
+    "go",
     "c",
     "cpp",
     "python",

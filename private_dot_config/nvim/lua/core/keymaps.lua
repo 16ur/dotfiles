@@ -39,6 +39,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
+-- Comments (mini.comment also provides `gcc` and `gc`)
+vim.keymap.set("n", "<leader>c", "gcc", { remap = true, desc = "Toggle comment" })
+vim.keymap.set("x", "<leader>c", "gc", { remap = true, desc = "Toggle comment" })
+
 
 -- Nvim tree
 vim.keymap.set("n", "<leader>e", function()
@@ -88,7 +92,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
+local diagnostics_virtual_text_enabled = vim.diagnostic.config().virtual_text ~= false
+
+vim.keymap.set("n", "<leader>ld", function()
+    diagnostics_virtual_text_enabled = not diagnostics_virtual_text_enabled
+    vim.diagnostic.config({
+        virtual_text = diagnostics_virtual_text_enabled,
+    })
+end, { desc = "Toggle inline diagnostics" })
 
 
 

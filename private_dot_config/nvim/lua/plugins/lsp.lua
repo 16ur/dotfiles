@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
         "ty",
         "clangd",
         "rust_analyzer",
+        "gopls",
     },
 })
 
@@ -14,4 +15,5 @@ vim.lsp.enable({
     "ty",
     "clangd",
     "rust_analyzer",
+    "gopls",
 })
